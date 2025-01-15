@@ -1,0 +1,27 @@
+@SearchAggregation.Api_HostAddress = http://localhost:5288
+
+
+###
+### 1) Valid Search
+POST http://localhost:5000/api/Search
+Content-Type: application/json
+
+{
+  "query": "Hello World"
+}
+
+### 2) Cached Search 
+POST http://localhost:5000/api/Search
+Content-Type: application/json
+
+{
+  "query": "Hello World"
+}
+
+### 3) Empty Query
+POST http://localhost:5000/api/Search
+Content-Type: application/json
+
+{
+  "query": ""
+}
